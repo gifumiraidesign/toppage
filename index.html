@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIFU MIRAI DESIGN | 岐阜県の飲食店向けホームページ制作</title>
+    <meta name="description" content="GIFU MIRAI DESIGNは岐阜県の飲食店を中心に、洗練されたホームページ制作サービスを展開しています。料金プランやサービス内容はこちら。">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['"Noto Serif JP"', 'serif'],
+                        en: ['"Playfair Display"', 'serif'],
+                    },
+                    colors: {
+                        luxury: {
+                            dark: '#1a1a1a',
+                            gold: '#C5A059',
+                            light: '#f9f8f6',
+                            gray: '#8c8c8c'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: 'Noto Serif JP', serif;
+            background-color: #f9f8f6;
+            color: #1a1a1a;
+        }
+        
+        /* Scroll Effects */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 1s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .fade-in-up.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1a1a1a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #C5A059;
+        }
+    </style>
+</head>
+<body class="antialiased font-serif leading-relaxed">
+
+    <!-- ① ファーストビュー -->
+    <header class="relative h-screen w-full flex items-center justify-center parallax" style="background-image: linear-gradient(rgba(26, 26, 26, 0.6), rgba(26, 26, 26, 0.6)), url('photo1.jpg');">
+        <div class="text-center text-white px-4 fade-in-up is-visible">
+            <h1 class="font-en text-4xl md:text-6xl tracking-widest mb-6 text-luxury-gold">GIFU MIRAI DESIGN</h1>
+            <p class="text-xl md:text-3xl font-light tracking-widest leading-loose">
+                岐阜の飲食店に、<br class="md:hidden">未来のWebデザインを。
+            </p>
+            <p class="mt-6 text-sm md:text-base text-gray-300 tracking-widest">店舗の世界観を最大限に引き出す、洗練されたデジタル体験。</p>
+        </div>
+        
+        <!-- スクロール誘導 -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
+            <span class="text-white text-xs tracking-widest mb-2 font-en uppercase">Scroll</span>
+            <i class="fa-solid fa-chevron-down text-luxury-gold"></i>
+        </div>
+    </header>
+
+    <!-- ② 店舗紹介 (Agency Intro) -->
+    <section class="py-24 bg-luxury-light" id="about">
+        <div class="container mx-auto px-4 max-w-4xl text-center fade-in-up">
+            <h2 class="text-3xl md:text-4xl font-en text-luxury-dark mb-4 tracking-widest">CONCEPT</h2>
+            <p class="text-luxury-gold text-sm tracking-widest mb-12 uppercase">私たちについて</p>
+            
+            <p class="text-base md:text-lg leading-loose text-gray-700 text-justify md:text-center">
+                GIFU MIRAI DESIGNは、岐阜県の飲食店様に特化したホームページ制作サービスを展開しております。<br>
+                料理の香り、店内の温もり、シェフの想い。それら「店舗の世界観」を画面越しに伝えるためには、妥協のないデザインが必要です。<br>
+                私たちはスマートフォンファーストかつ、高級感と読み込み速度を両立したWebサイトで、貴店の未来をデザインします。
+            </p>
+        </div>
+    </section>
+
+    <!-- ③ 人気メニュー (Pricing Plans - AI紹介風) -->
+    <section class="py-24 bg-white" id="pricing">
+        <div class="container mx-auto px-4 max-w-6xl fade-in-up">
+            <h2 class="text-3xl md:text-4xl font-en text-center text-luxury-dark mb-4 tracking-widest">PLAN & PRICING</h2>
+            <p class="text-luxury-gold text-center text-sm tracking-widest mb-4 uppercase">制作プラン・人気メニュー</p>
+            
+            <!-- AIリコメンドバッジ -->
+            <div class="flex justify-center mb-12">
+                <span class="bg-gray-100 text-luxury-dark text-xs px-4 py-2 rounded-full border border-gray-200">
+                    <i class="fa-solid fa-robot text-luxury-gold mr-1"></i> AIが貴店に最適なプランをご提案：<strong class="font-bold">スタンダードプランが最も人気です</strong>
+                </span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- ライトプラン -->
+                <article class="border border-gray-200 p-8 flex flex-col bg-luxury-light transition-shadow hover:shadow-2xl fade-in-up">
+                    <h3 class="text-xl font-bold mb-2 border-b border-luxury-gold/50 pb-4">【ライトプラン】</h3>
+                    <p class="text-2xl font-en text-luxury-gold my-6">4,980<span class="text-sm text-gray-500 font-serif">円（税抜）/月額</span></p>
+                    <ul class="text-sm leading-relaxed text-gray-700 flex-grow space-y-4">
+                        <li><i class="fa-solid fa-check text-luxury-gold mr-2"></i>Webサイトの正常な表示の維持および管理</li>
+                        <li><i class="fa-solid fa-check text-luxury-gold mr-2"></i>Googleマップとの連携サポート</li>
+                    </ul>
+                </article>
+
+                <!-- スタンダードプラン -->
+                <article class="border-2 border-luxury-gold p-8 flex flex-col bg-white relative transform md:-translate-y-4 shadow-xl fade-in-up" style="transition-delay: 100ms;">
+                    <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-luxury-gold text-white text-xs py-1 px-4 tracking-widest">
+                        POPULAR
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 border-b border-luxury-gold/50 pb-4">【スタンダードプラン】</h3>
+                    <p class="text-2xl font-en text-luxury-gold my-6">9,800<span class="text-sm text-gray-500 font-serif">円（税抜）/月額プラン</span></p>
+                    <ul class="text-sm leading-relaxed text-gray-700 flex-grow space-y-4">
+                        <li><i class="fa-solid fa-check text-luxury-gold mr-2"></i>Webサイトの正常な表示の維持および管理</li>
+                        <li><i class="fa-solid fa-check text-luxury-gold mr-2"></i>Googleマップとの連携サポート</li>
+                        <li><i class="fa-solid fa-check text-luxury-gold mr-2"></i>月に1回までの軽微な修正作業<br><span class="text-xs text-gray-500 ml-6">（メニュー名の変更、価格の修正、写真の差し替え等）</span></li>
+                    </ul>
+                </article>
+
+                <!-- プレミアムプラン -->
+                <article class="border border-gray-200 p-8 flex flex-col bg-luxury-dark text-white fade-in-up" style="transition-delay: 200ms;">
+                    <h3 class="text-xl font-bold mb-2 border-b border-gray-700 pb-4">【プレミアムプラン】</h3>
+                    <p class="text-2xl font-en text-luxury-gold my-6">19,800<span class="text-sm text-gray-400 font-serif">円（税抜）/月額プラン</span></p>
+                    <ul class="text-sm leading-relaxed text-gray-300 flex-grow space-y-4">
+                        <li><i class="fa-solid fa-check text-luxury-gold mr-2"></i>Webサイトの正常な表示の維持および管理</li>
+                        <li><i class="fa-solid fa-check text-luxury-gold mr-2"></i>Googleマップとの連携サポート</li>
+                        <li><i class="fa-solid fa-check text-luxury-gold mr-2"></i>月に1回までの軽微な修正作業<br><span class="text-xs text-gray-400 ml-6">（メニュー名の変更、価格の修正、写真の差し替え等）</span></li>
+                        <li><i class="fa-solid fa-star text-luxury-gold mr-2"></i>オリジナルキャラクター制作</li>
+                    </ul>
+                </article>
+            </div>
+
+            <!-- オプション料金 -->
+            <div class="mt-16 bg-luxury-light p-8 md:p-12 border border-gray-200 fade-in-up">
+                <h4 class="text-lg font-bold mb-6 text-center tracking-widest border-b border-luxury-gold/30 pb-4 inline-block mx-auto w-full">オプション・スポット費用</h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-12 text-sm text-gray-700">
+                    <div class="flex justify-between border-b border-dashed border-gray-300 pb-2">
+                        <span>独自ドメイン取得設定代行</span>
+                        <span class="text-right">50,000円<br><span class="text-xs text-luxury-gold">（スタンダード・プレミアムプランは無料）</span></span>
+                    </div>
+                    <div class="flex justify-between border-b border-dashed border-gray-300 pb-2">
+                        <span>サイト全体のデザインの根本的な変更<br><span class="text-xs">（リニューアル）</span></span>
+                        <span class="text-right">300,000円</span>
+                    </div>
+                    <div class="flex justify-between border-b border-dashed border-gray-300 pb-2">
+                        <span>修正依頼、または一度に大量のテキスト・画像差し替え</span>
+                        <span class="text-right">30,000円</span>
+                    </div>
+                    <div class="flex justify-between border-b border-dashed border-gray-300 pb-2">
+                        <span>オリジナルキャラクター制作</span>
+                        <span class="text-right">15,000円 / 月額</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ④ 選ばれる理由 -->
+    <section class="py-24 bg-luxury-dark text-white parallax" style="background-image: linear-gradient(rgba(26, 26, 26, 0.9), rgba(26, 26, 26, 0.9)), url('photo2.jpg');">
+        <div class="container mx-auto px-4 max-w-6xl fade-in-up">
+            <h2 class="text-3xl md:text-4xl font-en text-center mb-4 tracking-widest text-luxury-gold">REASON</h2>
+            <p class="text-center text-sm tracking-widest mb-16 uppercase text-gray-400">GIFU MIRAI DESIGNが選ばれる理由</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+                <div class="fade-in-up">
+                    <div class="w-20 h-20 mx-auto rounded-full border border-luxury-gold flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-mobile-screen-button text-3xl text-luxury-gold"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-4 tracking-widest">スマホファースト設計</h3>
+                    <p class="text-sm text-gray-400 leading-relaxed text-justify md:text-center">飲食店の検索はスマートフォンの割合が圧倒的です。モバイル環境でも美しく、直感的に操作できる洗練されたUIを提供します。</p>
+                </div>
+                <div class="fade-in-up" style="transition-delay: 100ms;">
+                    <div class="w-20 h-20 mx-auto rounded-full border border-luxury-gold flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-gauge-high text-3xl text-luxury-gold"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-4 tracking-widest">圧倒的な表示速度</h3>
+                    <p class="text-sm text-gray-400 leading-relaxed text-justify md:text-center">画像の最適化や最新のコーディング技術により、ユーザーを待たせない高速な読み込みを実現。離脱率を防ぎます。</p>
+                </div>
+                <div class="fade-in-up" style="transition-delay: 200ms;">
+                    <div class="w-20 h-20 mx-auto rounded-full border border-luxury-gold flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-magnifying-glass-location text-3xl text-luxury-gold"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-4 tracking-widest">MEO・SEO対策</h3>
+                    <p class="text-sm text-gray-400 leading-relaxed text-justify md:text-center">正しいHTML構造とGoogleマップの連携サポートにより、岐阜県内で店舗を探している見込み客へ的確にアプローチします。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 特定商取引法に基づく表記 -->
+    <section class="py-16 bg-white border-t border-gray-200">
+        <div class="container mx-auto px-4 max-w-4xl fade-in-up">
+            <h2 class="text-xl font-bold text-center text-luxury-dark mb-8 tracking-widest border-b pb-4">特定商取引法に基づく表記</h2>
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm text-left border-collapse border border-gray-300">
+                    <tbody>
+                        <tr class="border-b border-gray-300 bg-gray-50">
+                            <th class="py-4 px-6 font-semibold w-1/3 border-r border-gray-300">販売事業者名</th>
+                            <td class="py-4 px-6">GIFU MIRAI DESIGN</td>
+                        </tr>
+                        <tr class="border-b border-gray-300">
+                            <th class="py-4 px-6 font-semibold bg-gray-50 border-r border-gray-300">所在地</th>
+                            <td class="py-4 px-6">〒501-0200 岐阜県瑞穂市〇〇町1-2-3 （※ダミーテキスト）</td>
+                        </tr>
+                        <tr class="border-b border-gray-300">
+                            <th class="py-4 px-6 font-semibold bg-gray-50 border-r border-gray-300">代表者または運営責任者</th>
+                            <td class="py-4 px-6">岐阜 太郎</td>
+                        </tr>
+                        <tr class="border-b border-gray-300">
+                            <th class="py-4 px-6 font-semibold bg-gray-50 border-r border-gray-300">連絡先</th>
+                            <td class="py-4 px-6">058-000-0000 / info@dummy-gifumiraidesign.jp</td>
+                        </tr>
+                        <tr class="border-b border-gray-300">
+                            <th class="py-4 px-6 font-semibold bg-gray-50 border-r border-gray-300">販売価格</th>
+                            <td class="py-4 px-6">本ページ内の料金表に記載の通り</td>
+                        </tr>
+                        <tr class="border-b border-gray-300">
+                            <th class="py-4 px-6 font-semibold bg-gray-50 border-r border-gray-300">商品代金以外に必要な費用</th>
+                            <td class="py-4 px-6">消費税、銀行振込手数料、ドメイン・サーバー維持費（プラン外の場合）</td>
+                        </tr>
+                        <tr>
+                            <th class="py-4 px-6 font-semibold bg-gray-50 border-r border-gray-300">支払方法および支払時期</th>
+                            <td class="py-4 px-6">クレジットカード決済・銀行振込<br>月額費用は毎月〇日引き落とし・指定口座へお振込</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- プライバシーポリシー -->
+    <section class="py-16 bg-luxury-light border-t border-gray-200">
+        <div class="container mx-auto px-4 max-w-4xl fade-in-up">
+            <h2 class="text-xl font-bold text-center text-luxury-dark mb-8 tracking-widest border-b border-luxury-gold/30 pb-4">プライバシーポリシー</h2>
+            <div class="bg-white p-8 border border-gray-200 shadow-sm text-sm text-gray-700 leading-relaxed space-y-6">
+                <p>GIFU MIRAI DESIGN（以下、「当方」）は、お客様の個人情報の保護を最も重要な責務と認識し、以下の通りプライバシーポリシーを定めます。</p>
+                
+                <div>
+                    <h3 class="font-bold text-luxury-dark mb-2 text-base"><i class="fa-solid fa-square-small text-luxury-gold mr-2"></i>1. 個人情報の収集・利用目的</h3>
+                    <p>当方は、お客様からのお問い合わせやサービスのお申し込みにあたり、氏名、メールアドレス、電話番号等の個人情報を取得する場合があります。これらの情報は、ご質問への回答やサービスの提供、および当方からのご案内にのみ利用し、目的外の利用はいたしません。</p>
+                </div>
+                
+                <div>
+                    <h3 class="font-bold text-luxury-dark mb-2 text-base"><i class="fa-solid fa-square-small text-luxury-gold mr-2"></i>2. 個人情報の第三者提供</h3>
+                    <p>当方は、法令に定める場合を除き、あらかじめお客様の同意を得ることなく、個人情報を第三者に提供・開示することはいたしません。</p>
+                </div>
+                
+                <div>
+                    <h3 class="font-bold text-luxury-dark mb-2 text-base"><i class="fa-solid fa-square-small text-luxury-gold mr-2"></i>3. 個人情報の安全管理</h3>
+                    <p>当方は、個人情報の漏洩、紛失、改ざん等を防止するため、適切なセキュリティ対策を実施し、個人情報を厳重に管理いたします。</p>
+                </div>
+                
+                <div>
+                    <h3 class="font-bold text-luxury-dark mb-2 text-base"><i class="fa-solid fa-square-small text-luxury-gold mr-2"></i>4. プライバシーポリシーの変更</h3>
+                    <p>当方は、法令の改正等により、本ポリシーを事前の予告なく変更することがあります。変更後のポリシーは、本ウェブサイトに掲載した時点から効力を生じるものとします。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ⑧ お問い合わせ -->
+    <section class="py-24 bg-luxury-dark text-white" id="contact">
+        <div class="container mx-auto px-4 max-w-3xl fade-in-up">
+            <h2 class="text-3xl md:text-4xl font-en text-center mb-4 tracking-widest text-luxury-gold">CONTACT</h2>
+            <p class="text-center text-sm tracking-widest mb-12 uppercase text-gray-400">お問い合わせ・無料相談</p>
+            
+            <form class="space-y-6">
+                <div>
+                    <label for="name" class="block text-sm tracking-widest mb-2">店舗名 / 貴社名</label>
+                    <input type="text" id="name" class="w-full bg-transparent border-b border-gray-600 focus:border-luxury-gold py-2 px-1 text-white outline-none transition-colors" placeholder="例: 岐阜フレンチ MIRAI">
+                </div>
+                <div>
+                    <label for="email" class="block text-sm tracking-widest mb-2">メールアドレス</label>
+                    <input type="email" id="email" class="w-full bg-transparent border-b border-gray-600 focus:border-luxury-gold py-2 px-1 text-white outline-none transition-colors" placeholder="info@example.com">
+                </div>
+                <div>
+                    <label for="message" class="block text-sm tracking-widest mb-2">ご相談内容</label>
+                    <textarea id="message" rows="5" class="w-full bg-transparent border-b border-gray-600 focus:border-luxury-gold py-2 px-1 text-white outline-none transition-colors resize-none" placeholder="ホームページのリニューアルについて相談したい等、お気軽にご記載ください。"></textarea>
+                </div>
+                <div class="text-center pt-8">
+                    <button type="button" class="bg-luxury-gold hover:bg-white hover:text-luxury-dark text-white px-12 py-4 tracking-widest transition-all duration-300 uppercase text-sm border border-luxury-gold">
+                        送信する
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="bg-black py-8 border-t border-gray-800 text-center">
+        <p class="text-xs text-gray-500 font-en tracking-widest">&copy; 2026 GIFU MIRAI DESIGN. All Rights Reserved.</p>
+    </footer>
+
+    <!-- スクロールアニメーション用JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const options = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, options);
+
+            const elements = document.querySelectorAll('.fade-in-up');
+            elements.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>
